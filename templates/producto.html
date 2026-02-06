@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card" style="max-width:500px;margin:auto">
+    <img src="{{ url_for('static', filename='img/' ~ producto.imagen) }}">
+    <div class="card-content">
+        <h3>{{ producto.nombre }}</h3>
+        <div class="price">${{ producto.precio }}</div>
+        <a href="/" class="btn">Volver</a>
+    </div>
+</div>
+{% endblock %}
+<a href="/agregar/{{ producto.id }}" class="btn">Agregar al carrito</a>

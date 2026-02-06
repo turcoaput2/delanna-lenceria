@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Editar producto</h2>
+
+<form method="POST">
+    <input type="text" name="nombre" value="{{ producto.nombre }}">
+    <input type="number" name="precio" value="{{ producto.precio }}">
+    <button class="btn">Guardar</button>
+</form>
+{% endblock %}

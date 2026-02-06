@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Delanna | Lencería femenina</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <h1>DELANNA</h1>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="/login">Admin</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Lencería femenina</h2>
+    <p>Elegancia, confort y sensualidad</p>
+</section>
+
+<section id="productos" class="productos">
+    {% for p in productos %}
+    <div class="card">
+        <img src="{{ url_for('static', filename='img/' ~ p.imagen) }}">
+        <h3>{{ p.nombre }}</h3>
+        <span>${{ p.precio }}</span>
+        <a href="/producto/{{ p.id }}" class="btn">Ver producto</a>
+    </div>
+    {% endfor %}
+</section>
+
+<a href="https://wa.me/+54935188539" class="whatsapp" target="_blank">WhatsApp</a>
+
+<footer class="footer">
+    © Delanna – Lencería femenina
+</footer>
+
+</body>
+</html>
+
