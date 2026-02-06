@@ -1,0 +1,10 @@
+lenceria_flask/
+│
+├── app.py
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── css/
+│       └── style.css
